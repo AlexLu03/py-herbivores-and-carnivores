@@ -12,7 +12,9 @@ class Animal:
 
     def __repr__(self) -> str:
         return (
-            f"{{Name: {self.name}, Health: {self.health}, Hidden: {self.hidden}}}"
+            "{Name: " + self.name +
+            ", Health: " + str(self.health) +
+            ", Hidden: " + str(self.hidden) + "}"
         )
 
     def take_damage(self, amount: int) -> None:
