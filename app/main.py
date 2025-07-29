@@ -4,7 +4,12 @@ from typing import List
 class Animal:
     alive: List["Animal"] = []
 
-    def __init__(self, name: str, health: int = 100, hidden: bool = False) -> None:
+    def __init__(
+    self,
+    name: str,
+    health: int = 100,
+    hidden: bool = False
+) -> None:
         self.name: str = name
         self.health: int = health
         self.hidden: bool = hidden
@@ -12,9 +17,9 @@ class Animal:
 
     def __repr__(self) -> str:
         return (
-            "{Name: " + self.name +
-            ", Health: " + str(self.health) +
-            ", Hidden: " + str(self.hidden) + "}"
+            "{Name: " + self.name
+            + ", Health: " + str(self.health)
+            + ", Hidden: " + str(self.hidden) + "}"
         )
 
     def take_damage(self, amount: int) -> None:
